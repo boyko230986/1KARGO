@@ -1,0 +1,1386 @@
+/*------сброс стилей------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+	height: 100%;
+}
+/*-----подключение шрифтов------*/
+@font-face {
+ font-family: "OpenSans Bold";
+ src: local('OpenSans Bold'), local('OpenSans Bold'),
+ url('../fonts/opensans-bold-webfont.woff') format("woff"),
+ url('../fonts/opensans-bold-webfont.woff2') format("woff2"),
+ url('../fonts/opensans-bold-webfont.ttf') format("truetype");
+ font-style: normal;
+ font-weight: 600;
+}
+@font-face {
+ font-family: "OpenSans Light";
+ src: local('OpenSans Light'), local('OpenSans Light'),
+ url('../fonts/opensans-light-webfont.woff') format("woff"),
+ url('../fonts/opensans-light-webfont.woff2') format("woff2"),
+ url('../fonts/opensans-light-webfont.ttf') format("truetype");
+ font-style: normal;
+ font-weight: 300;
+}
+@font-face {
+ font-family: "OpenSans Redular";
+ src: local('OpenSans Redular'), local('OpenSans Redular'),
+ url('../fonts/opensans-regular-webfont.woff') format("woff"),
+ url('../fonts/opensans-regular-webfont.woff2') format("woff2"),
+ url('../fonts/opensans-regular-webfont.ttf') format("truetype");
+ font-style: normal;
+ font-weight: 400;
+}
+@font-face {
+ font-family: "OpenSans SemiBold";
+ src: local('OpenSans SemiBold'), local('OpenSans SemiBold'),
+ url('../fonts/opensans-semibold-webfont.woff') format("woff"),
+ url('../fonts/opensans-semibold-webfont.woff2') format("woff2"),
+ url('../fonts/opensans-semibold-webfont.ttf') format("truetype");
+ font-style: normal;
+ font-weight: 600;
+}
+@font-face {
+ font-family: "RobotoCondensed Bold";
+ src: local("RobotoCondensed Bold"), local("RobotoCondensed Bold"),
+ url('../fonts/robotocondensed-bold-webfont.woff') format("woff"),
+ url('../fonts/robotocondensed-bold-webfont.woff2') format("woff2"),
+ url('../fonts/robotocondensed-bold-webfont.ttf') format("truetype");
+ font-weight: 600;
+ font-style: normal;
+} 
+@font-face {
+ font-family: "RobotoCondensed Redular";
+ src: local("RobotoCondensed Redular"), local("RobotoCondensed Redular"),
+ url('../fonts/robotocondensed-regular-webfont.woff') format("woff"),
+ url('../fonts/robotocondensed-regular-webfont.woff2') format("woff2"),
+ url('../fonts/robotocondensed-regular-webfont.ttf') format("truetype");
+ font-style: normal;
+ font-weight: 400;
+}
+
+/*----общее-----*/
+body {
+	color: #3a3a3a;
+	box-sizing: border-box;
+}
+* {
+	box-sizing:border-box
+}
+
+
+
+
+
+.container {
+	max-width: 1920px;
+}
+.block {
+	width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+	padding:0 15px;
+}
+/*-----шрифты-----*/
+.tele, h1, .form p, .form-group label, .title_dostavki p, .name p, .vopros {
+	font-family: "OpenSans Bold", Arial, sans-serif;
+}
+input.name, .data, option, .cod, .post, .fine, .ps p, .form-control {
+	font-family: "OpenSans Light", Arial, sans-serif;
+}
+.mailto, h2 {
+	font-family: "OpenSans Redular", Arial, sans-serif;
+}
+.btn, .content-title p, .bottom a, .cost p, .letter, #form span {
+	font-family: "OpenSans SemiBold", Arial, sans-serif;
+}
+.logoname {
+	font-family: "RobotoCondensed Bold", Arial, sans-serif;
+}
+.logoname-2 {
+	font-family: "RobotoCondensed Redular", Arial, sans-serif;
+}
+/*--------чердак------*/
+.connection {
+	background: #25333c;
+	height: 45px;
+}
+#connection {
+	text-align: right;
+	max-width: 1170px;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+}
+.connection a {
+	color: #d3d6d8;
+	font-size: 14px;
+	text-decoration: none;
+}
+.connection a:hover {
+	text-decoration: underline;
+}
+.connection div {
+	position: relative;
+	padding: 7px 15px;
+}
+.couple_1 {
+	width: 140px;
+}
+.couple_2 {
+    width: 210px;
+}
+.couple_1 img {
+	position: absolute;
+    left: 2%;
+    top: 30%;
+}
+.couple_2 img  {
+	position: absolute;
+    left: 6%;
+	top: 35%;
+}
+/*-----банер-----*/
+.logotip {
+	background: url(images/logo1.png) no-repeat;
+	width: 98px;
+    height: 80px;
+}
+.banner {
+	display: flex;
+	flex-flow: row nowrap;
+	color: #fff;
+	padding-top: 15px;
+}
+.logotip {
+	flex: 0 0 11%;
+}
+.log_10 {
+	flex: 0 0 25%;
+}
+.logomenu {
+	flex: 0 0 69%;
+}
+.logoname {
+	font-size: 27px;
+}
+.logoname-2 {
+	font-size: 12px;
+}
+/*-----блок 1 самолёт-----*/
+.container.one_section {
+	background: url(images/fon1.png) no-repeat;
+	background-size : 100% 100%;
+	height: 740px;
+}
+.next-1 h1 {
+	font-size: 48px;
+	color: #fff;
+	text-align: center;
+	padding-top: 35px;
+}
+.feedback {
+	display: flex;
+	flex-flow: column;
+	padding: 14px 0 9px;
+}
+.form.leave_a_request form {
+	background: rgba(211, 210, 213, 0.8);
+	width: 315px;
+	margin: 50px auto;
+}
+#modal1Title{
+	background: #25333c;
+	color: #fff;
+	height: 60px;
+	text-align: center;
+    padding-top: 16px;
+	line-height: 1em;
+}
+.vid_1 {
+	font-size: 19px;
+}
+.vid_2 {
+	font-size: 14px;
+}
+.olg_5 {
+	width: 260px;
+	height: 50px;
+	margin: 2px auto;
+	padding-left: 20px;
+	border: 1px solid #c1c4c7;
+	font-size: 13px;
+}
+input {
+	outline: none;
+}
+.btn {
+	width: 210px;
+	height: 55px;
+	margin: 15px auto;
+	background: #e93b3b;
+    border: 1px solid #e93b3b;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 14px;
+}
+.btn:hover {
+	text-decoration: underline;
+}
+.message {
+	height: 64px;
+}
+a.foto {
+	background: url(images/sozseti-1.png) no-repeat;
+	background-size: 100% 100%;
+	width: 50px;
+    height: 50px;
+    display: block;
+}
+a.vkon {
+	background: url(images/sozseti-2.png) no-repeat;
+	background-size: 100% 100%;
+	display: block;
+	width: 50px;
+    height: 50px;
+	margin: 2px 0;
+}
+a.emailkt {
+	background: url(images/sozseti-3.png) no-repeat;
+	background-size: 100% 100%;
+	width: 50px;
+    height: 50px;
+    display: block;
+}
+.sozseti {
+	position: fixed;
+    right: 2%;
+    top: 33%;
+}
+/*-------блок 2 калькулятор-----*/
+h2 {
+	font-size: 30px;
+    text-align: center;
+}
+.next-2 h2 {
+	padding: 43px 0 70px;
+}
+.form_calculator {
+	border: 1px solid #e93b3b;
+	position: relative;
+	padding-bottom: 40px;
+}
+.img.calculator {
+	position: absolute;
+    top: -19%;
+    left: 44.5%;
+	padding: 0 10px;
+    background-color: #fff;
+}
+.form_calculator form {
+	position: relative;
+}
+.fixsed {
+	position: absolute;
+	left: 41%;
+	box-shadow: 0 0 0px 14px rgba(255, 255, 255);
+}
+.row_1 {
+	display: flex;
+	flex-flow: row nowrap;
+	padding: 70px 13px 25px;
+}
+.col-lg-6 {
+	flex: 0 0 25%;
+}
+.form-group {
+	display: flex;
+	flex-flow: column;
+}
+.form-control {
+	height: 50px;
+	outline: none;
+    border: 1px solid #c1c4c7;
+	margin: 0 7px;
+	padding: 0 0 2px 22px;
+	background-image: url(images/strelka.png);
+    background-repeat: no-repeat, repeat;
+    background-position: right 0 top 50%, 0 0;
+    background-size: auto, 100%;
+    appearance: none;
+}
+.form-group label {
+	padding: 0 9px 5px;
+}
+.lg-5 {
+	text-align: center;
+}
+.f-control_1 {
+	width: 70px;
+	height: 50px;
+	border: 1px solid #c1c4c7;
+    margin: 0 4px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.f-control_2 {
+	width: 95px;
+	height: 50px;
+	border: 1px solid #c1c4c7;
+}
+.input-group {
+	padding: 8px 0;
+}
+.next-2 {
+	padding-bottom: 75px;
+}
+/*------блок 3 Доставкаю Горячее предложение.------*/
+.three_section, .fifth_section {
+	background: #f3f3f3;
+}
+.next-3 h2 {
+	padding: 50px 0 10px;
+}
+p.fine {
+	font-size: 19px;
+    text-align: center;
+}
+.next-3 #form {
+	display: flex;
+	flex-flow: column;
+}
+.dost {
+	width: 310px;
+	border: 2px solid #fff;
+	margin: 12px;
+	background: #fff;
+}
+.form_dostavki {
+	display: flex;
+	flex-flow: row nowrap;
+	padding: 20px 67px 40px;
+}
+.title_dostavki p {
+	font-size: 16px;
+    color: #fff;
+    text-align: center;
+    padding-top: 21px;
+    background: #25333c;
+    height: 60px;
+}
+.next-3 img, .next-4 img {
+	margin: 0 auto;
+    display: block;
+	padding: 5px 0;
+}
+.next-3 div.img {
+	height: 75px;
+}
+.content-title p {
+	text-align: center;
+    font-size: 18px;
+}
+.cost p {
+	font-size: 28px;
+    text-align: center;
+    color: #e93b3b;
+	padding: 3px 0 8px;
+}
+.ps p {
+	font-size: 13px;
+    text-align: center;
+	padding-bottom: 20px;
+}
+.img.train, .img.ship {
+	padding: 6px 0;
+}
+/*-------блок 4 Способы доставки груза------*/
+.next-4 .dost {
+	width: 260px;
+	border: 1px solid #c4c7ca;
+	margin: 0 16px;
+}
+.next-4 .first_option {
+	margin-left: 0;
+}
+.next-4 .fourth_option {
+	margin-right: 0;
+}
+.delivery.methods {
+	display: flex;
+	flex-flow: row nowrap;
+}
+.bottom a.btn {
+	width: 163px;
+	height: 41px;
+	border: 1px solid #e93b3b;
+	background: #fff;
+	color: #e93b3b;
+	font-size: 12px;
+	display: block;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 13px;
+}
+.bottom a.btn:hover {
+	text-decoration: underline;
+}
+.next-4 h2 {
+	padding: 50px 0 70px;
+}
+.block.next-4 {
+	margin-bottom: 70px;
+}
+.img.avia, .img.poezd, .img.poezd-1 {
+	padding: 4px 0;
+}
+.next-4 .bottom {
+	padding: 3px 0 7px;
+}
+.status-top {
+	border: 1px solid #e93b3b;
+    position: relative;
+}
+.next-4 div.img {
+	height: 85px;
+}
+.img.puti {
+	position: absolute;
+    top: -37%;
+    left: 44.5%;
+	padding: 0 10px;
+    background-color: #fff;
+}
+.cod, .namber {
+	width: 265px;
+	height: 50px;
+	font-size: 13px;
+    padding-left: 20px;
+	margin: 0 2px;
+}
+.status_form form {
+	position: relative;
+	padding: 68px 0 45px;
+}
+.status_form input.btn {
+	position: absolute;
+	bottom: -27%;
+    left: 41%;
+	box-shadow: 0 0 0px 7px rgba(255, 255, 255);
+}
+.status {
+	margin: 0 auto;
+	width: 544px;
+}
+/*-----блок 5 Наши менеджеры-----*/
+.people {
+	display: flex;
+	flex-flow: row wrap;
+	padding-bottom: 70px;
+}
+.condidat-1, .condidat-2, .condidat-3 {
+	flex: 0 0 33.3%;
+}
+.manager {
+	width: 360px;
+	margin: 0 auto;
+	position: relative;
+	padding-top: 155px;
+}
+.next-5 h2 {
+	padding: 45px 0 5px;	
+}
+.people .img {
+    position: absolute;
+	top: 7%;
+    left: 28%;
+}
+.people .name {
+	background: #fff;
+    height: 65px;
+    width: 360px;
+    color: #e93b3b;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 35px;
+	margin: 0 auto;
+}
+.people .post {
+	background: #fff;
+    width: 360px;
+    height: 60px;
+    text-align: center;
+    font-size: 14px;
+	margin: 0 auto;
+}
+/*----блок 6 Как мы работаем-----*/
+.next-6 h2 {
+	padding: 45px 0 20px;
+}
+.col-1 {
+	display: flex;
+	flex-flow: row wrap;
+}	
+.line {
+	flex: 0 0 25%;
+	padding-bottom: 25px;
+}
+.line .img {
+	width: 60px;
+    margin: 0 auto;
+	height: 60px;
+}
+.line .name {
+	color: #e93b3b;
+	text-align: center;
+}
+.line .post {
+	text-align: center;
+	font-size: 14px;
+}
+.logotip-1 {
+	padding: 6px;
+}
+.next-6 {
+	padding-bottom: 45px;
+}
+/*----блок 7 Остались вопросы------*/
+.container.seventh_section {
+    background: url(images/fon-2.png) no-repeat;
+    background-size: 100% 100%;
+    height: 440px;
+}
+.next-7 {
+	padding: 62px 0 78px;
+}
+.voprosy {
+	margin: 0 125px;
+    background: #25333c;
+    height: 68px;
+	color: #fff;
+	text-align: center;
+}
+p.vopros {
+	font-size: 19px;
+	padding-top: 14px;
+}
+p.letter {
+	font-size: 14px;
+}
+.forma_footer {
+	margin: 0 125px
+}
+.next-7 .olg_5 {
+	width: 287px;
+}
+.next-7 .olg_5.phone {
+	margin: 0 5px;
+}
+.forma_footer form {
+	padding: 10px 20px;
+	background: rgba(218, 216, 211, 0.8);
+}
+.next-7 .message {
+	width: 100%;
+    margin-top: 10px;
+    border: 1px solid #c1c4c7;
+    padding-left: 20px;
+}
+.next-7 .btn {
+	display: block;
+}
+/*-------подвал--------*/
+.ending .logotip, .logoname_22, .typ-2 {
+	float: left;
+}
+.typ-2 a {
+	color: #d3d6d8;
+	font-size: 14px;
+	text-decoration: none;
+}
+.typ-2 a:hover {
+	text-decoration: underline;
+}
+.typ-2 div {
+	padding: 4px 42px 8px;
+}
+.typ-2 {
+	padding-left: 350px;
+}
+.c_footer-1, .c_footer-2 {
+	position: relative;
+}
+.c_footer-1 img {
+	position: absolute;
+	top: 19%;
+    left: 8%;
+}
+.c_footer-2 img {
+	position: absolute;
+	top: 27%;
+    left: 8%;
+}
+.logoname_22  {
+	color: #fff;
+	padding: 0 35px 0 8px;
+}
+.block.ending {
+	height: 115px;
+    background: #25333c;
+	max-width: 1920px;
+    width: 100%;
+}
+.block .exit {
+	width: 1170px;
+	margin: 0 auto;
+	padding-top: 23px;
+}
+.typ-3 {
+	display: flex;
+    flex-flow: row nowrap;
+	justify-content: flex-end;
+	padding-top: 13px;
+}
+a.end_link_1 {
+    background: url(images/footer-icon-3.png) no-repeat;
+}
+a.end_link_2 {
+    background: url(images/footer-icon-4.png) no-repeat;
+}
+a.end_link_3 {
+    background: url(images/footer-icon-5.png) no-repeat;
+}
+a.end_link_4 {
+    background: url(images/footer-icon-6.png) no-repeat;
+}
+a.end_link_5 {
+    background: url(images/footer-icon-7.png) no-repeat;
+}
+.typ-3 a {
+    background-size: 100% 100%;
+    width: 36px;
+    height: 36px;
+    display: block;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+.typ-3:last-of-type a {
+	margin-right: 0;
+}
+@media (max-width: 1200px) {
+.block {
+	width: 100%;
+    max-width: 950px;
+}
+.next-7 .olg_5 {
+    width: 214px;
+}
+.container.one_section {
+    height: 590px;
+}
+.next-1 h1 {
+    padding-top: 0;
+	font-size: 40px;
+}
+.sozseti a {
+    width: 40px;
+    height: 40px;
+}
+.form.leave_a_request form {
+    margin: 15px auto;
+}
+.banner {
+    padding-top: 7px;
+}
+.btn {
+    width: 190px;
+    height: 50px;
+}
+.sozseti {
+    right: 1%;
+    top: 27%;
+}
+.next-3 .olg_5 {
+    width: 235px;
+    height: 43px;
+}
+.row_1 {
+    padding: 65px 16px 20px 3px;
+}
+.line {
+    padding: 0 5px 25px;
+}
+.line .post {
+    font-size: 12px;
+}
+.typ-2 {
+    padding-left: 200px;
+}
+.typ-3 {
+    justify-content: flex-start;
+}
+.block.ending {
+    height: 80px;
+}
+.block .exit {
+    padding-top: 10px;
+}
+.bottom a.btn {
+    width: 150px;
+    height: 38px;
+    margin: 10px auto;
+    padding-top: 10px;
+}
+}
+@media (max-width: 1050px) {
+.block {
+	width: 100%;
+    max-width: 900px;
+}
+.container.one_section {
+	height: 530px;
+}
+.connection a {
+    font-size: 12px;
+}
+.couple_1 img {
+    left: 10%;
+}
+.couple_2 img {
+    left: 15%;
+    top: 38%;
+}
+.logotip {
+    background-size: contain;
+	height: 65px;
+}
+.log_10 {
+	padding-left: 5px;
+}
+.logoname {
+    font-size: 22px;
+}
+.logoname-2 {
+    font-size: 10px;
+}
+.sozseti {
+	right: 0;
+    top: 24%;
+}
+.btn {
+    font-size: 12px;
+    width: 180px;
+    height: 44px;
+}
+.banner {
+    padding-top: 7px;
+}
+.form.leave_a_request form {
+	width: 300px;
+}
+.olg_5 {
+    width: 250px;
+    height: 45px;
+}
+.vid_1 {
+	padding-bottom: 3px;
+}
+.form-control {
+    width: 208px;
+    height: 45px;
+    margin: 0 4px;
+}
+.f-control_1 {
+    width: 70px;
+    height: 45px;
+}
+.f-control_2 {
+    height: 45px;
+}
+.title_dostavki p {
+    padding-top: 16px;
+    height: 53px;
+}
+.form_dostavki {
+    padding: 15px 43px 35px;
+}
+.next-3 img, .next-4 img {
+	width: 18%;
+}
+.img.plane img {
+	width: 23%;
+}
+.img.train, .img.ship {
+    padding: 0;
+}
+.next-3 div.img, .next-4 .methods div.img {
+    height: 50px;
+}
+.cost p {
+    padding: 0;
+	font-size: 24px;
+}
+.next-3 .olg_5 {
+    width: 215px;
+    height: 40px;
+}
+.content-title p {
+    font-size: 16px;
+}
+.olg_5 {
+    font-size: 11px;
+}
+.manager {
+    padding-top: 115px;
+}
+.bottom a.btn {
+    width: 120px;
+    height: 33px;
+    margin: 7px auto;
+    font-size: 10px;
+}
+.ps p {
+    font-size: 12px;
+    padding-bottom: 7px;
+}
+.img.ship {
+	padding-bottom: 5px;
+}
+.img.puti img {
+	width: 94%;
+}
+.people img {
+	max-width: 115px;
+}
+.people .img {
+	top: 15%;
+    left: 34%;
+}
+.next-7 .olg_5 {
+    width: 197px;
+}
+.container.seventh_section {
+    height: 400px;
+}
+.message {
+    font-size: 11px;
+    height: 55px;
+}
+}
+@media (max-width: 992px) {
+.block {
+	width: 100%;
+    max-width: 700px;
+}
+.container.one_section {
+	height: 400px;
+}
+.connection {
+    height: 35px;
+}
+.connection a {
+    font-size: 11px;
+}	
+.connection div {
+    padding: 3px 15px;
+}
+.couple_1 img {
+    left: 19%;
+    top: 33%;
+    max-width: 12px;
+}
+.couple_2 img {
+    left: 23%;
+	max-width: 12px;
+}
+.logotip {
+    height: 30px;
+	flex: 0 0 9%;
+}
+.logoname {
+    font-size: 17px;
+}
+.logoname-2 {
+    font-size: 8px;
+}
+.next-1 h1 {
+    padding-top: 4px;
+    font-size: 30px;
+}
+.form.leave_a_request form {
+    width: 250px;
+}
+#modal1Title {
+    height: 50px;
+    padding-top: 9px;
+}
+.btn {
+    font-size: 11px;
+    width: 155px;
+    height: 34px;
+	margin: 7px auto;
+}
+.vid_1 {
+    font-size: 15px;
+}
+.vid_2 {
+    font-size: 10px;
+}
+.olg_5 {
+    width: 235px;
+    height: 35px;
+	padding-left: 15px;
+}
+.bottom a.btn{
+    width: 170px;
+    height: 35px;
+    margin: 5px auto;
+	font-size: 12px;
+}
+.sozseti a {
+    width: 35px;
+    height: 35px;
+}
+.sozseti {
+    top: 18%;
+}
+.calculator img {
+	max-width: 75px;
+}
+.img.calculator {
+    top: -18%;
+}
+.next-2 h2 {
+    padding: 15px 0 45px;
+}
+.form-control {
+    width: 161px;
+    height: 35px;
+    font-size: 11px;
+    margin: 0 2px;
+	padding-left: 8px;
+}
+.form-group label {
+    font-size: 13px;
+}
+.form-control {
+    background-size: 14%;
+}
+.f-control_1 {
+    width: 45px;
+    height: 35px;
+}
+.f-control_2 {
+    height: 35px;
+    width: 70px;
+}
+.fixsed {
+    left: 39%;
+    top: 107%;
+    box-shadow: 0 0 0px 8px rgba(255, 255, 255);
+}
+.input-group {
+    padding: 0;
+}
+.row_1 {
+    padding: 57px 16px 10px 3px;
+}
+.dost {
+    width: 186px;
+    border: 1px solid #fff;
+    margin: 4px;
+}
+h2 {
+    font-size: 24px;
+}
+p.fine {
+    font-size: 15px;
+}
+.next-3 h2 {
+    padding: 20px 0 3px;
+}
+.title_dostavki p {
+    padding-top: 9px;
+    height: 33px;
+    font-size: 11px;
+}
+.content-title p {
+    font-size: 12px;
+}
+.cost p {
+    font-size: 17px;
+}
+.next-3 .olg_5 {
+    width: 175px;
+    height: 35px;
+}
+div.img {
+    height: 40px;
+}
+.bottom a.btn {
+    width: 112px;
+    height: 25px;
+    font-size: 9px;
+    padding-top: 6px;
+}
+.ps p {
+    font-size: 10px;
+}
+.next-4 h2 {
+    padding: 20px 0 40px;
+}
+.cod, .namber {
+    width: 220px;
+    height: 40px;
+    font-size: 11px;
+    padding-left: 14px;
+}
+.status {
+    width: 453px;
+}
+.img.puti {
+    top: -32%;
+	left: 43%;
+    padding: 0 6px;
+    width: 90px;
+}
+.status_form form {
+    padding: 57px 0 33px;
+}
+.status_form input.btn {
+    bottom: -19%;
+}
+.next-5 h2 {
+    padding: 20px 0 5px;
+}
+.people img {
+    max-width: 100px;
+}
+.people .name {
+    height: 45px;
+    width: 280px;
+    font-size: 12px;
+    padding-top: 27px;
+}
+.people .post {
+     width: 280px;
+    height: 47px;
+    font-size: 11px;
+}
+.people {
+    padding-bottom: 40px;
+}
+.condidat-1, .condidat-2, .condidat-3 {
+    flex: 0 0 50%;
+}
+.manager {
+    width: 333px;
+	padding-top: 95px;
+}
+.people .img {
+    left: 33%;
+	top: 4%;
+}
+.next-6 h2 {
+    padding: 20px 0 13px;
+}
+.col-1 .line img {
+    max-width: 40px;
+}
+.line .img {
+    width: 49px;
+    height: 49px;
+}
+.line .name {
+    font-size: 14px;
+}
+.line .post {
+    font-size: 11px;
+}
+.line {
+    flex: 0 0 33.33%;
+}
+.col-27 {
+	margin-left: 107px;
+}
+.next-6 {
+    padding-bottom: 15px;
+}
+.voprosy {
+    height: 45px;
+}
+p.vopros {
+    font-size: 14px;
+    padding-top: 7px;
+}
+p.letter {
+    font-size: 10px;
+}
+.next-7 .olg_5 {
+    width: 130px;
+    font-size: 10px;
+}
+.message {
+    font-size: 10px;
+    height: 45px;
+}
+.container.seventh_section {
+    height: 325px;
+}
+.block.ending {
+    height: 55px;
+}
+.logoname {
+    font-size: 15px;
+}
+.typ-2 {
+    padding-left: 165px;
+}
+.typ-2 a {
+    font-size: 10px;
+}
+.typ-2 div {
+    padding: 0 37px 0;
+}
+.c_footer-1 img {
+    top: 22%;
+    left: 10%;
+    max-width: 12px;
+}
+.c_footer-2 img {
+    top: 35%;
+    left: 9%;
+    max-width: 12px;
+}
+.typ-3 a {
+    width: 26px;
+    height: 26px;
+}
+.typ-3 {
+    padding-top: 5px;
+}
+}
+@media (max-width: 767px) {
+	.block {
+	width: 100%;
+}
+.container.one_section {
+	height: 310px;
+}
+.connection {
+    height: 30px;
+}
+.couple_2 {
+    width: 136px;
+}
+.couple_2 img {
+    left: -1%;
+}
+.logotip {
+    height: 24px;
+}
+.logoname {
+    font-size: 12px;
+}
+.log_10 {
+    padding-left: 1px;
+    flex: 0 0 26%;
+}
+.next-1 h1 {
+    font-size: 20px;
+}
+.vid_1 {
+    font-size: 12px;
+}
+#modal1Title {
+    height: 40px;
+    padding-top: 6px;
+    line-height: 12px;
+}
+.form.leave_a_request form {
+    width: 222px;
+}
+.olg_5 {
+    width: 210px;
+    height: 25px;
+    padding-left: 11px;
+	font-size: 9px;
+}
+.btn {
+    font-size: 10px;
+    width: 120px;
+    height: 30px;
+    margin: 3px auto;
+}
+.sozseti a {
+    width: 28px;
+    height: 28px;
+    margin-top: 6px;
+}
+.sozseti {
+    right: 1%;
+    top: 13%;
+}
+.banner {
+    padding-top: 3px;
+}
+h2 {
+    font-size: 20px;
+    padding: 10px 0 35px;
+}
+.form_calculator {
+    padding-bottom: 20px;
+}
+.row_1 {
+    padding: 30px 6px 7px 3px;
+}
+.form-group label {
+    font-size: 11px;
+}
+.form-control {
+    width: 128px;
+    height: 25px;
+    font-size: 8px;
+}
+.f-control_1 {
+    width: 35px;
+    height: 25px;
+}
+.f-control_2 {
+    height: 25px;
+    width: 54px;
+}
+.calculator img {
+    max-width: 53px;
+}
+.img.calculator {
+    padding: 0 5px;
+}
+.fixsed {
+    left: 38%;
+    top: 105%;
+    box-shadow: 0 0 0px 4px rgba(255, 255, 255);
+}
+p.fine {
+    font-size: 13px;
+}
+.dost {
+    width: 142px;
+	margin: 0 auto;
+}
+.title_dostavki p {
+    padding-top: 8px;
+    height: 31px;
+    font-size: 10px;
+}
+.next-3 div.img, .next-4 .methods div.img {
+    height: 30px;
+}
+.content-title p {
+    font-size: 10px;
+}
+.cost p {
+    font-size: 12px;
+}
+.next-3 .olg_5 {
+    width: 130px;
+    height: 27px;
+}
+.ps p {
+    font-size: 10px;
+}
+.next-4 h2 {
+    padding: 20px 0 29px;
+}
+.next-4 .dost {
+    width: 109px;
+	margin: 0 auto;
+}
+.fourth_option p {
+	padding-top: 2px;
+}
+.bottom a.btn {
+    width: 87px;
+    height: 30px;
+    padding-top: 2px;
+}
+.img.puti img {
+    width: 74%;
+}
+.img.puti {
+    padding: 0;
+    width: 80px;
+}
+.status_form form {
+    padding: 44px 0 29px;
+}
+.cod, .namber {
+    width: 190px;
+    height: 35px;
+    font-size: 10px;
+}
+.status {
+    width: 392px;
+}
+.block.next-4 {
+    margin-bottom: 35px;
+}
+.people .name {
+    height: 42px;
+    width: 220px;
+    font-size: 11px;
+    padding-top: 15px;
+}
+.people .post {
+    width: 220px;
+    height: 40px;
+	font-size: 10px;
+}
+.manager {
+    width: 255px;
+    padding-top: 95px;
+}
+.people .img {
+    left: 25%;
+	
+}
